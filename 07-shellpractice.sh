@@ -14,3 +14,4 @@ arg2=$2
 echo "Your name is: $name"
 echo "Argument 1 is: $arg1"
 echo "Argument 2 is: $arg2
+fi
