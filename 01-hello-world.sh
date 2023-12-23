@@ -1,8 +1,8 @@
 #!/bib/bash
 
 echo "Hello world, I am learning devops"
-PERSON1=Ramesh # no spaces here 
-PERSON2=Suresh
+PERSON1=sai # no spaces here 
+PERSON2=mahesh
 
 echo "$PERSON1: hi $PERSON2, good morning"
 
