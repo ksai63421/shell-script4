@@ -2,7 +2,9 @@
 
 # Take user input
 echo "Enter your name:"
-read name
+echo "Enter your password:"
+read -s name
+read -s password
 
 # Take input from arguments
 arg1=$1
