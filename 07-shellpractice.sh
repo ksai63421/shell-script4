@@ -1,20 +1,14 @@
-
-
-# example of using arguments to a script
-
-
-# echo "My first name is $1"
-# echo "My surname is $2"
-# echo "Total number of arguments is $#" 
-
 #!/bin/bash
 
-# Assign two numbers to variables
-num1=20
-num2=10
+# Take user input
+echo "Enter your name:"
+read name
 
-# Compare the numbers using if-else statements
-if [ $num1 -gt $num2 ]
-then
-  echo "$num1 is greater than $num2"
-fi
+# Take input from arguments
+arg1=$1
+arg2=$2
+
+# Print the variables
+echo "Your name is: $name"
+echo "Argument 1 is: $arg1"
+echo "Argument 2 is: $arg2
