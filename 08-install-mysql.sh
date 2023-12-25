@@ -3,6 +3,18 @@
 # out program goal is to install mysql
 
 USERID=$(id -u)
+  # this function should validate the previous command and inform user it is success or failure
+
+VALIDATE(){
+  #$1 --> it will recieve the argument1
+  if [ $1 -ne 0 ]
+then 
+   echo "Installation is failure"
+   exit 1
+   else
+    echo "Installation is success"
+   fi
+}
 
 if [ $USERID -ne 0 ]
 then
@@ -12,20 +24,8 @@ fi
 # it is our responsibility again to check intsllation successfully or not
 yum install mysql -y
 
-if [ $? -ne 0 ]
-then 
-   echo "Installation of mysql is error"
-   exit 1
-   else
-    echo "Installation of mysql is success"
-   fi
+VALIDATE $?
 
    yum install postfix -y
 
-   if [ $? -ne 0 ]
-then 
-   echo "Installation of postfix is error"
-   exit 1
-   else
-    echo "Installation of postfix is success"
-   fi
+  VALIDATE $?
