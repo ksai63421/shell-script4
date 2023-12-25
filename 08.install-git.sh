@@ -11,4 +11,5 @@ then
 #   else 
 # echo "INFO:: You are not root user"
 fi
+then
 yum install git -y
