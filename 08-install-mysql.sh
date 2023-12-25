@@ -8,3 +8,4 @@ if [ $USERID -ne 0 ]
  echo "ERROR:: Please run this script with root access"
   exit 1
 yum install mysql -y
+fi 
