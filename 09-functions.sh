@@ -7,17 +7,14 @@ SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 
-R="\e[31m"
-G=\e[32m"
-
 VALIDATE(){
   #$1 --> it will recieve the argument1
   if [ $1 -ne 0 ]
 then 
-   echo -e "$2..... $R failure"
+   echo -e "$2.....  failure"
    exit 1
 else
-    echo -e "$2.... $G success"
+    echo -e "$2.... success"
 fi
 }
 
@@ -34,6 +31,6 @@ yum install mysql -y &>>$LOGFILE # I don't want this ouptput again I want to red
 
 VALIDATE $? "Installing MySQL"
 
-   yum install posddtfix -y &>>$LOGFILE
+   yum install postfix -y &>>$LOGFILE
 
   VALIDATE $? "Installing postfix"
