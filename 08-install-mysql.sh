@@ -4,6 +4,7 @@
 DATE=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+
 # I want to uppend all the ouputs to this log file
 VALIDATE(){
   #$1 --> it will recieve the argument1
