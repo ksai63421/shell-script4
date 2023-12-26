@@ -11,9 +11,16 @@
 #implements functions
 # implements
 
-for i in {2..10}
+# for i in {2..10}
 
-do 
- echo "output: $i"
+# do 
+#  echo "output: $i"
 
- done 
+#  done 
+
+max=10
+
+for i in {2..max}
+do
+ echo "$i"
+ done
