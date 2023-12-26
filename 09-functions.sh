@@ -34,6 +34,6 @@ yum install mysql -y &>>$LOGFILE # I don't want this ouptput again I want to red
 
 VALIDATE $? "Installing MySQL"
 
-   yum install postfix -y &>>$LOGFILE
+   yum install posddtfix -y &>>$LOGFILE
 
   VALIDATE $? "Installing postfix"
