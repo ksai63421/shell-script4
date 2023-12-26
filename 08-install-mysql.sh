@@ -2,10 +2,9 @@
 
 # out program goal is to install mysql
 DATE=$(date +%F-%H-%M-%S)
-
-USERID=$(id -u)
-  # this function should validate the previous command and inform user it is success or failure
-
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+# I want to uppend all the ouputs to this log file
 VALIDATE(){
   #$1 --> it will recieve the argument1
   if [ $1 -ne 0 ]
@@ -17,16 +16,19 @@ then
    fi
 }
 
+USERID=$(id -u)
+  # this function should validate the previous command and inform user it is success or failure
+
 if [ $USERID -ne 0 ]
 then
  echo "ERROR:: Please run this script with root access"
   exit 1
 fi 
 # it is our responsibility again to check intsllation successfully or not
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE # I don't want this ouptput again I want to redirect
 
 VALIDATE $? "Installing MySQL"
 
-   yum install postfix -y
+   yum install postfix -y &>>$LOGFILE
 
   VALIDATE $? "Installing postfix"
