@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # out program goal is to install mysql
+DATE=$(date +%F-%H-%M-%S)
 
 USERID=$(id -u)
   # this function should validate the previous command and inform user it is success or failure
