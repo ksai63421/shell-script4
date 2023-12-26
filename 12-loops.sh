@@ -18,9 +18,18 @@
 
 #  done 
 
-max=10
+# max=10
 
-for i in 'seq 2 max'
+# for i 
+# do
+#  echo "output: $i"
+#  done
+
+for i in 1 2 3 4 5
 do
- echo "output: $i"
- done
+if [ condition ]
+then 
+   continue #Continue with the next iteration of i and skip statement 3
+   fi
+   statement 
+   done
