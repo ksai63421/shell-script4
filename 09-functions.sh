@@ -4,15 +4,21 @@
 DATE=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+
+# colors in scripting
+R="\e[31m"
+G=\e[32m"
+N="\e[0m"
+
 # I want to uppend all the ouputs to this log file
 VALIDATE(){
   #$1 --> it will recieve the argument1
   if [ $1 -ne 0 ]
 then 
-   echo "$2 is failure"
+   echo "$2 is $R failure $N"
    exit 1
    else
-    echo "$2 is success"
+    echo "$2 is $G success $N"
    fi
 }
 
