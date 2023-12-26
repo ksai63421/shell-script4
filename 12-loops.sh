@@ -20,7 +20,7 @@
 
 max=10
 
-for i in {2..max}
+for i in 'seq 2 max'
 do
  echo "output: $i"
  done
