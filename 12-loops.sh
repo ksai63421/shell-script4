@@ -1,10 +1,19 @@
 #!/bin/bash
 
-for i in 1 2 3 4 5
-do
-if [ condition ]
-then 
-   continue #Continue with the next iteration of i and skip statement 3
-   fi
-   statement 
-   done
+USERID=$(id -u)
+R="\e[31m"
+N="\e[0m"
+
+if [ $USERID -ne 0 ];
+then
+  echo -e "$R"ERROR: Please run this script with root access $N"
+  exit 1
+  fi
+
+
+
+# all args are in $@
+for i in $@
+do 
+  yum install $i -y
+  done
