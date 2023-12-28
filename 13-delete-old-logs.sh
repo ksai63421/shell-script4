@@ -20,6 +20,8 @@ do
 
 done <<< $FILES_TO_DELETE
 
+echo "$message" | mail -s "high disk usage" maddala.2022@gmail.com
+
 
 
 # we need to delete lof files more than 12 days
