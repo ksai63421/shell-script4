@@ -17,6 +17,8 @@
 
 # in realtime projects we will have more volumes attached
 
+# usually we have a lot of alerts, you need to prepare template email to trigger with respective alerts and email messages
+
 
 
 #!/bin/bash
@@ -56,6 +58,10 @@ done <<< $DISK_USAGE
 echo -e "message: $message"
 
 echo "$message" | mail -s "high disk usage" maddala.2022@gmail.com
+
+mail.sh maddala.2022@gmail.com "High disk usage" "$message" "Devops Team" "High disk usage"
+
+
 
 
 
