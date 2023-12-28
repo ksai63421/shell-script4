@@ -4,7 +4,7 @@
 
 APP_LOGS_DIR=/home/centos/app-logs
 
-DATE=$(date +%F)
+DATE=$(date +%F:%H:%M:%S)
 LOGSDIR=/home/centos/shellscript-logs
 # inside the above folder /home/centos/shellscript-logs/script-name-date.log
 SCRIPT_NAME=$0
@@ -29,3 +29,5 @@ done <<< $FILES_TO_DELETE
 # get all the log files with extension of .log
 # check the date
 #if date is more than 2 weeks old date
+
+
